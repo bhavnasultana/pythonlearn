@@ -12,7 +12,7 @@ for i in range(no_of_rows):
 
     headers = {
     'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
-    'x-rapidapi-key': rapidapi_key
+    'x-rapidapi-key': utils.auth.load_rapidapi_key()
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
     jsonResponse = response.json()
